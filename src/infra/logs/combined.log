@@ -45,3 +45,11 @@
 {"level":"info","message":"[produtosControllers] - Produto adicionado ao carrinho","service":"hamburguergama","timestamp":"2023-04-10T18:35:51.842Z"}
 {"level":"info","message":"[produtosControllers] - payload: {\"nome_produto\":\"Aphamon\",\"descricao\":\"modinha dmo\",\"preco\":\"5555555\"}","service":"hamburguergama","timestamp":"2023-04-10T18:35:51.842Z"}
 {"level":"error","message":"[pedidosControllers] error: SequelizeAccessDeniedError: Access denied for user ''@'localhost' (using password: NO)","service":"hamburguergama","timestamp":"2023-04-10T18:35:51.850Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-10T22:29:02.330Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-10T22:29:02.335Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-10T22:29:02.335Z"}
+{"level":"info","message":"Servidor rodando na porta 8000","service":"hamburguergama","timestamp":"2023-04-10T22:29:02.339Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-10T22:29:58.452Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-10T22:29:58.456Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-10T22:29:58.456Z"}
+{"level":"info","message":"Servidor rodando na porta 8000","service":"hamburguergama","timestamp":"2023-04-10T22:29:58.460Z"}

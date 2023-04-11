@@ -56,6 +56,21 @@ const pedidosController = {
             const pedidoid = yield pedidos_1.default.findByPk(id);
             return res.json(pedidoid);
         });
+    },
+    updatepedido(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { id } = req.params;
+            const pedidoupdate = yield pedidos_1.default.findByPk(id);
+            return res.json(pedidoupdate);
+        });
+    },
+    deletepedido(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { id } = req.params;
+            const pedidodelet = yield pedidos_1.default.findByPk(id);
+            yield pedidos_1.default.destroy({ where: { id } });
+            return res.status(200).json({ message: "deletado", data: pedidodelet });
+        });
     }
 };
 exports.default = pedidosController;

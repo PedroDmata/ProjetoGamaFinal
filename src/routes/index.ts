@@ -14,11 +14,12 @@ routes.delete("/produtos/:id", produtosControllers.delete);
 
 
 //rotas pedidos
-
-//rotas pedidos
 routes.post('/pedidos'), controller.create
 routes.get('/pedidos'),controller.list
 routes.get('/pedidos:id'),controller.getpedidoid
+routes.post('/pedidos:id'),controller.updatepedido   
+routes.delete('/pedidos:id') ,controller.deletepedido
+
 
 
 export default routes;

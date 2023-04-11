@@ -17,4 +17,6 @@ routes.delete("/produtos/:id", controllerProdutos_1.default.delete);
 routes.post('/pedidos'), controllerpedidos_1.default.create;
 routes.get('/pedidos'), controllerpedidos_1.default.list;
 routes.get('/pedidos:id'), controllerpedidos_1.default.getpedidoid;
+routes.post('/pedidos:id'), controllerpedidos_1.default.updatepedido;
+routes.delete('/pedidos:id'), controllerpedidos_1.default.deletepedido;
 exports.default = routes;

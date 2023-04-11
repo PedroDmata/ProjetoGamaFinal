@@ -1,4 +1,4 @@
-import winston from "winston";
+import winston from "winston"
 import path from 'path'
 
 const logger = winston.createLogger({

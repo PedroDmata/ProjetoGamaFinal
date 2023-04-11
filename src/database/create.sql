@@ -12,13 +12,17 @@ CREATE TABLE clientes (
   nome VARCHAR(255) NOT NULL,
   endereco VARCHAR(255) NOT NULL,
   telefone VARCHAR(20) NOT NULL,
+  senha VARCHAR(20) NOT NULL,
   email VARCHAR(255) UNIQUE
 );
 
 CREATE TABLE funcionarios (
   id INT PRIMARY KEY,
   nome VARCHAR(255),
-  cpf VARCHAR(20)
+  cpf VARCHAR(20),
+  senha VARCHAR(20) NOT NULL,
+  email VARCHAR(255) UNIQUE
+
 );
 
 CREATE TABLE categorias (

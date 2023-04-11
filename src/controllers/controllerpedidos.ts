@@ -36,13 +36,28 @@ const pedidosController = {
     }
   },
   async getpedidoid(req:Request, res:Response){
-    const {id} = req.params
+const {id} = req.params
 
     const pedidoid = await PedidosModel.findByPk(id);
-        return res.json(pedidoid)       
+        return res.json(pedidoid)
+        
 
-   }    
+   },
+    async updatepedido(req:Request, res:Response){
+      const {id} = req.params
+      const pedidoupdate = await PedidosModel.findByPk(id);
+      return res.json(pedidoupdate)
+ 
+    },
+
+    async deletepedido(req:Request, res:Response){
+      const {id}= req.params
+      const pedidodelet = await PedidosModel.findByPk(id);
+      await PedidosModel.destroy({where:{id}});
+      return res.status(200).json({message:"deletado", data:pedidodelet})
+
+    }
     
-  }
+  };
 
 export default pedidosController
