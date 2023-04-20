@@ -1,7 +1,9 @@
 import { Request, Response } from "express";
 import logger from "../logger/index";
-import ClientesModel from "../models/usuarios";
-import { clientes } from "../models/usuarios";
+import Clientes from "../models/usuarios";
+import { hash } from "bcrypt";
+
+//criando usuario
 
 const usuariosControllers = {
     async create(req: Request, res: Response, ){
@@ -11,10 +13,12 @@ const usuariosControllers = {
             logger.info(`[usuarioControllers] - payload: ${JSON.stringify(Object.assign({}, req.body) ) }`
             );
 
-            const newUsers = await ClientesModel.create({
+            const passwordHash = await hash(senha, 10);
+
+            const newUsers = await Clientes.create({
                 nome,
                 email,  
-                senha,
+                senha: passwordHash,
                 endereco,
                 telefone
             });
@@ -30,12 +34,11 @@ const usuariosControllers = {
 
     async list(req: Request, res: Response){
         try{
-            const usuarios = await ClientesModel.findAll({
+            const usuarios = await Clientes.findAll({
                 raw:true,
-            }) as unknown as clientes[];
+            }) as unknown as Clientes[];
 
             const usuarioMapped = usuarios.map((usuario) =>{
-                const urlCompleta = "/usuarios/" + usuario.id;
 
                 return { ...usuario};
             });
@@ -52,7 +55,7 @@ const usuariosControllers = {
     async getUsuarioID (req: Request, res: Response){
         const {id} = req.params;
 
-        const usuario = await ClientesModel.findByPk(id);
+        const usuario = await Clientes.findByPk(id);
         return res.json(usuario);
     },
 
@@ -63,7 +66,7 @@ const usuariosControllers = {
             const {id} = req.params;
             const {nome, email, senha} = req.body;
 
-            const usuario = await ClientesModel.findByPk(id);
+            const usuario = await Clientes.findByPk(id);
 
             if (!usuario){
                 return res.status(404).json("Usuário não encontrado");
@@ -84,7 +87,7 @@ const usuariosControllers = {
     async delete(req: Request, res: Response){
         try{
             const {id} = req.params;
-            const usuario = await ClientesModel.findByPk(id);
+            const usuario = await Clientes.findByPk(id);
 
             if (!usuario){
                 return res.status(404).json("Usuário não encontrado");

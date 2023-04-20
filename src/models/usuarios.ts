@@ -1,18 +1,25 @@
-import { DataTypes, ModelDefined, Optional } from "sequelize";
+import { DataTypes, Model } from "sequelize";
 import db from "../database/db";
 
-export interface clientes{
-    id: number
+interface ClientesAttributes{
+    id?: number | null
     nome: string
     email: string
-    senha: number
+    senha: string
     endereco: string
     telefone : number
 }
 
-type UsersCreation = Optional<clientes, 'id'>
+class Clientes extends Model<ClientesAttributes> implements ClientesAttributes{
+    public id!: number | null;
+    public nome!: string;
+    public email!: string;
+    public senha!: string;
+    public endereco!: string;
+    public telefone!: number;
+}
 
-export const ClientesModel: ModelDefined<clientes, UsersCreation> = db.define("clientes", {
+Clientes.init({
     id:{
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -29,20 +36,18 @@ export const ClientesModel: ModelDefined<clientes, UsersCreation> = db.define("c
     },
 
     senha: {
-        type: DataTypes.NUMBER
+        type: DataTypes.STRING
     },
     endereco :{
         type: DataTypes.STRING
     },
     telefone:{
         type: DataTypes.NUMBER
-    }
-
-
-   
-}, {
+    }   
+}, 
+{
     tableName: 'clientes',
-    timestamps: false
+    sequelize: db
 })
 
-export default ClientesModel
+export default Clientes

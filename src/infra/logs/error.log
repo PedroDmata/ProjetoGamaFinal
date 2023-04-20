@@ -14,3 +14,10 @@
 {"level":"error","message":"[usuariosControllers] error: SequelizeConnectionError: connect ETIMEDOUT","service":"hamburguergama","timestamp":"2023-04-12T22:43:07.435Z"}
 {"level":"error","message":"[usuariosControllers] error: SequelizeDatabaseError: Field 'id' doesn't have a default value","service":"hamburguergama","timestamp":"2023-04-12T22:43:19.547Z"}
 {"level":"error","message":"[usuariosControllers] error: SequelizeDatabaseError: Field 'endereco' doesn't have a default value","service":"hamburguergama","timestamp":"2023-04-12T22:47:32.668Z"}
+{"level":"error","message":"[usuariosControllers] error: SequelizeUniqueConstraintError: Validation error","service":"hamburguergama","timestamp":"2023-04-19T22:29:52.210Z"}
+{"level":"error","message":"[usuariosControllers] error: SequelizeDatabaseError: Unknown column 'createdAt' in 'field list'","service":"hamburguergama","timestamp":"2023-04-20T13:46:00.495Z"}
+{"level":"error","message":"[usuariosControllers] error: SequelizeDatabaseError: Unknown column 'createdAt' in 'field list'","service":"hamburguergama","timestamp":"2023-04-20T13:47:22.882Z"}
+{"level":"error","message":"[usuariosControllers] error: SequelizeDatabaseError: Unknown column 'createdAt' in 'field list'","service":"hamburguergama","timestamp":"2023-04-20T13:54:57.821Z"}
+{"level":"error","message":"[usuariosControllers] error: SequelizeDatabaseError: Unknown column 'createdAt' in 'field list'","service":"hamburguergama","timestamp":"2023-04-20T13:55:02.137Z"}
+{"level":"error","message":"[usuariosControllers] error: SequelizeDatabaseError: Unknown column 'createdAt' in 'field list'","service":"hamburguergama","timestamp":"2023-04-20T13:56:00.676Z"}
+{"level":"error","message":"[usuariosControllers] error: SequelizeDatabaseError: Unknown column 'createdAt' in 'field list'","service":"hamburguergama","timestamp":"2023-04-20T13:58:06.001Z"}

@@ -1,17 +1,22 @@
-import { DataTypes, ModelDefined, Optional } from "sequelize";
+import { DataTypes, Model } from "sequelize";
 import db from "../database/db"
 
-export interface Produtos{
-  id: number
+interface ProdutosAttributes{
+  id?: number | null
   nome_produto: string
   descricao: string
   preco: string
 }
 
+class Produtos extends Model<ProdutosAttributes> implements ProdutosAttributes{
+  public id!: number | null;
+  public nome_produto!: string;
+  public descricao!: string;
+  public preco!: string;
+}
 
-type ProdutosCreation = Optional<Produtos, 'id'>
 
-export const ProdutosModel: ModelDefined<Produtos, ProdutosCreation> = db.define("Produtos", {
+Produtos.init({
   id:{
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -29,9 +34,10 @@ export const ProdutosModel: ModelDefined<Produtos, ProdutosCreation> = db.define
   preco: {
     type: DataTypes.INTEGER
   },
-}, {
+}, 
+{
   tableName: 'produtos',
-  timestamps: false
+  sequelize: db
 })
 
-export default ProdutosModel
+export default Produtos

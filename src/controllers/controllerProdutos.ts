@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import logger from "../logger/index";
-import ProdutosModel, { Produtos } from "../models/produtos";
+import { Produtos } from "../models";
 
 //criar produto
 
@@ -12,7 +12,7 @@ const produtosControllers = {
       logger.info(`[produtosControllers] - payload: ${JSON.stringify(Object.assign({}, req.body))}`
       );
 
-      const newProduto = await ProdutosModel.create({
+      const newProduto = await Produtos.create({
         nome_produto,
         descricao,
         preco,
@@ -29,7 +29,7 @@ const produtosControllers = {
 
   async list(req: Request, res: Response) {
     try {
-      const produtos = await ProdutosModel.findAll({
+      const produtos = await Produtos.findAll({
         raw: true,
       }) as unknown as Produtos[];
 
@@ -49,7 +49,7 @@ const produtosControllers = {
   async getProdutoID(req: Request, res: Response) {
     const { id } = req.params;
 
-    const produto = await ProdutosModel.findByPk(id);
+    const produto = await Produtos.findByPk(id);
     return res.json(produto);
   },
 
@@ -60,7 +60,7 @@ const produtosControllers = {
       const { id } = req.params;
       const { nome_produto, descricao, preco } = req.body;
 
-      const produto = await ProdutosModel.findByPk(id);
+      const produto = await Produtos.findByPk(id);
 
       if (!produto) {
         return res.status(404).json("Produto não encontrado");
@@ -81,7 +81,7 @@ const produtosControllers = {
     try {
       const { id } = req.params;
 
-      const produto = await ProdutosModel.findByPk(id);
+      const produto = await Produtos.findByPk(id);
 
       if (!produto) {
         return res.status(404).json("Produto não encontrado");

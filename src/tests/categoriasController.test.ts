@@ -1,8 +1,6 @@
-import supertest from 'supertest';
-import express from 'express';
-import Sequelize from 'sequelize';
-import Categoria from '../../../src/models/categorias';
-import categoriasController from '../../../src/controllers/categoriasController';
+import { Request, Response } from 'express';
+import Categoria from '../models/categorias';
+import categoriasController from '../controllers/categoriasController';
 
 describe('Categoria Controller', () => {    
     afterEach(() => {
@@ -10,14 +8,14 @@ describe('Categoria Controller', () => {
         jest.clearAllMocks();
       });
 
-    const categoriaMock = { id: 1, nome: 'Teste', descricao: 'Teste descricao' }
+    const categoriaMock = { id: 1, nome: 'Teste', descricao: 'Teste descricao' } as Categoria
 
     describe('função listarCategoria', () => {
         it('Deve listar todas as categorias', async () => {
           jest.spyOn(Categoria, 'findAll').mockResolvedValue([
             categoriaMock,
           ]);
-      
+          Categoria.findAll()
           const req = {} as Request;
           const res = {
             status: jest.fn().mockReturnThis(),
@@ -51,14 +49,14 @@ describe('Categoria Controller', () => {
     describe('listarcategoriaId', () => {      
         it('deve retornar uma categoria por ID', async () => {
             jest.spyOn(Categoria, 'findAll').mockResolvedValue([
-                categoriaMock,
+                categoriaMock
               ]);
           
             const req = {
                 params: {
                     id: 1
                 }
-            };
+            } as unknown as Request
             const res = {
                 status: jest.fn().mockReturnThis(),
                 json: jest.fn(),
@@ -79,7 +77,7 @@ describe('Categoria Controller', () => {
                 params: {
                     id: 1
                 }
-            };
+            } as unknown as Request
             const res = {
                 status: jest.fn().mockReturnThis(),
                 json: jest.fn(),
@@ -94,7 +92,7 @@ describe('Categoria Controller', () => {
         it('deve retornar erro 500 se ocorrer um erro interno do servidor', async () => {
             jest.spyOn(Categoria, 'findAll').mockResolvedValue([]);
           
-            const req = {};
+            const req = {} as Request;
             const res = {
                 status: jest.fn().mockReturnThis(),
                 json: jest.fn(),
@@ -117,7 +115,7 @@ describe('Categoria Controller', () => {
                     nome: 'Teste',
                     descricao: 'Teste descricao'
                 }
-            };
+            } as unknown as Request;
             const res = {
                 status: jest.fn().mockReturnThis(),
                 json: jest.fn(),
@@ -138,7 +136,7 @@ describe('Categoria Controller', () => {
                     nome: 'Teste',
                     descricao: 'Teste descricao'
                 }
-            };
+            }as unknown as Request;
             const res = {
                 status: jest.fn().mockReturnThis(),
                 json: jest.fn(),
@@ -159,7 +157,7 @@ describe('Categoria Controller', () => {
                     nome: 'Teste',
                     descricao: 'Teste descricao'
                 }
-            };
+            } as unknown as Request;
             const res = {
                 status: jest.fn().mockReturnThis(),
                 json: jest.fn(),
@@ -184,7 +182,7 @@ describe('Categoria Controller', () => {
                 params: {
                     id: 1,
                 }
-            };
+            } as unknown as Request;
             const res = {
                 status: jest.fn().mockReturnThis(),
                 json: jest.fn(),
@@ -207,7 +205,7 @@ describe('Categoria Controller', () => {
                 params: {
                     id: 1,
                 }
-            };
+            } as unknown as Request;
             const res = {
                 status: jest.fn().mockReturnThis(),
                 json: jest.fn(),
@@ -222,7 +220,7 @@ describe('Categoria Controller', () => {
         it('deve retornar erro 500 se ocorrer um erro interno do servidor', async () => {
             jest.spyOn(Categoria, 'update').mockResolvedValue([0]);
           
-            const req = {};
+            const req = {} as unknown as Request;
             const res = {
                 status: jest.fn().mockReturnThis(),
                 json: jest.fn(),
@@ -243,12 +241,12 @@ describe('Categoria Controller', () => {
                 params: {
                     id: 1,
                 }
-            };
+            } as unknown as Request;
             const res = {
                 status: jest.fn().mockReturnThis(),
                 sendStatus: jest.fn().mockReturnThis(),
                 json: jest.fn(),
-            };
+            } as unknown  as Response
 
             await categoriasController.deletarCategoria(req, res);
 
@@ -262,12 +260,12 @@ describe('Categoria Controller', () => {
                 params: {
                     id: 1,
                 }
-            };
+            } as unknown as Request;
             const res = {
                 status: jest.fn().mockReturnThis(),
                 sendStatus: jest.fn().mockReturnThis(),
                 json: jest.fn(),
-            };
+            } as unknown  as Response
 
             await categoriasController.deletarCategoria(req, res);
 
@@ -282,12 +280,12 @@ describe('Categoria Controller', () => {
                 params: {
                     id: 1,
                 }
-            };
+            } as unknown as Request;
             const res = {
                 status: jest.fn().mockReturnThis(),
                 sendStatus: jest.fn().mockReturnThis(),
                 json: jest.fn(),
-            };
+            } as unknown  as Response
 
             await categoriasController.deletarCategoria(req, res);
 

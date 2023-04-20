@@ -7,9 +7,10 @@
     "start": "nodemon build/app.js",
     "test": "jest"
   },
-  "author": "Desenvolvedor Daniel A.H.Z.",
+  "author": "Grupo 2 Gama Academy",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.0",
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
@@ -27,6 +28,7 @@
     "@babel/core": "^7.21.4",
     "@babel/preset-env": "^7.21.4",
     "@babel/preset-typescript": "^7.21.4",
+    "@types/bcrypt": "^5.0.0",
     "@types/jest": "^29.5.0",
     "@types/node": "^18.15.11",
     "@types/supertest": "^2.0.12",

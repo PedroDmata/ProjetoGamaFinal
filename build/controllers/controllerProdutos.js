@@ -13,7 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const index_1 = __importDefault(require("../logger/index"));
-const produtos_1 = __importDefault(require("../models/produtos"));
+const models_1 = require("../models");
 //criar produto
 const produtosControllers = {
     create(req, res) {
@@ -22,7 +22,7 @@ const produtosControllers = {
                 index_1.default.info("[produtosControllers] - Produto adicionado ao carrinho");
                 const { nome_produto, descricao, preco } = req.body;
                 index_1.default.info(`[produtosControllers] - payload: ${JSON.stringify(Object.assign({}, req.body))}`);
-                const newProduto = yield produtos_1.default.create({
+                const newProduto = yield models_1.Produtos.create({
                     nome_produto,
                     descricao,
                     preco,
@@ -40,7 +40,7 @@ const produtosControllers = {
     list(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const produtos = yield produtos_1.default.findAll({
+                const produtos = yield models_1.Produtos.findAll({
                     raw: true,
                 });
                 const produtosMapped = produtos.map((produto) => {
@@ -58,7 +58,7 @@ const produtosControllers = {
     getProdutoID(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { id } = req.params;
-            const produto = yield produtos_1.default.findByPk(id);
+            const produto = yield models_1.Produtos.findByPk(id);
             return res.json(produto);
         });
     },
@@ -68,7 +68,7 @@ const produtosControllers = {
             try {
                 const { id } = req.params;
                 const { nome_produto, descricao, preco } = req.body;
-                const produto = yield produtos_1.default.findByPk(id);
+                const produto = yield models_1.Produtos.findByPk(id);
                 if (!produto) {
                     return res.status(404).json("Produto não encontrado");
                 }
@@ -86,7 +86,7 @@ const produtosControllers = {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 const { id } = req.params;
-                const produto = yield produtos_1.default.findByPk(id);
+                const produto = yield models_1.Produtos.findByPk(id);
                 if (!produto) {
                     return res.status(404).json("Produto não encontrado");
                 }

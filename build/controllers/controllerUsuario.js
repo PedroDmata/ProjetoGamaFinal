@@ -14,6 +14,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const index_1 = __importDefault(require("../logger/index"));
 const usuarios_1 = __importDefault(require("../models/usuarios"));
+const bcrypt_1 = require("bcrypt");
+//criando usuario
 const usuariosControllers = {
     create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -21,10 +23,11 @@ const usuariosControllers = {
                 index_1.default.info("[usuarioControllers] - Usuario criado com sucesso");
                 const { nome, email, senha, endereco, telefone } = req.body;
                 index_1.default.info(`[usuarioControllers] - payload: ${JSON.stringify(Object.assign({}, req.body))}`);
+                const passwordHash = yield (0, bcrypt_1.hash)(senha, 10);
                 const newUsers = yield usuarios_1.default.create({
                     nome,
                     email,
-                    senha,
+                    senha: passwordHash,
                     endereco,
                     telefone
                 });
@@ -33,7 +36,7 @@ const usuariosControllers = {
             }
             catch (error) {
                 index_1.default.error(`[usuariosControllers] error: ${error}`);
-                return res.status(500).json("Algo errado! Verifiquei novamente");
+                return res.status(500).json("Algo errado! Verifique novamente");
             }
         });
     },
@@ -45,7 +48,6 @@ const usuariosControllers = {
                     raw: true,
                 });
                 const usuarioMapped = usuarios.map((usuario) => {
-                    const urlCompleta = "/usuarios/" + usuario.id;
                     return Object.assign({}, usuario);
                 });
                 return res.json(usuarioMapped);

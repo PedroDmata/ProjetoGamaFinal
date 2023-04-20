@@ -1,12 +1,12 @@
 import Categoria from './categorias';
-import ProdutosModel from './produtos';
+import Produtos from './produtos';
 
-ProdutosModel.belongsTo(Categoria, {
+Produtos.belongsTo(Categoria, {
   foreignKey: 'id_categoria'
 });
 
-Categoria.hasMany(ProdutosModel, {
+Categoria.hasMany(Produtos, {
   foreignKey: 'psicologo_id'
 });
 
-export { Categoria, ProdutosModel };
+export { Categoria, Produtos };

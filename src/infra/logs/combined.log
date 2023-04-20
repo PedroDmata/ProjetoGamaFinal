@@ -187,3 +187,84 @@
 {"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-15T00:45:36.800Z"}
 {"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-15T00:45:36.801Z"}
 {"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-15T00:45:36.809Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-19T18:56:31.247Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-19T18:56:31.252Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-19T18:56:31.253Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-19T18:56:31.259Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-19T20:11:40.724Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-19T20:11:40.730Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-19T20:11:40.730Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-19T20:11:40.761Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-19T20:24:39.919Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-19T20:24:39.925Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-19T20:24:39.925Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-19T20:24:39.930Z"}
+{"level":"info","message":"[usuarioControllers] - Usuario criado com sucesso","service":"hamburguergama","timestamp":"2023-04-19T20:30:05.761Z"}
+{"level":"info","message":"[usuarioControllers] - payload: {\"nome\":\"inferno\",\"email\":\"dhadfhb@gmail.com\",\"senha\":\"654321\",\"endereco\":\"porta do inferno, 666\",\"telefone\":\"00 99999-9999\"}","service":"hamburguergama","timestamp":"2023-04-19T20:30:05.792Z"}
+{"level":"info","message":"[usuarioControllers] - Usuario adicionado com sucesso!! ;) ","service":"hamburguergama","timestamp":"2023-04-19T20:30:06.504Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-19T22:29:25.196Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-19T22:29:25.202Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-19T22:29:25.203Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-19T22:29:25.222Z"}
+{"level":"info","message":"[usuarioControllers] - Usuario criado com sucesso","service":"hamburguergama","timestamp":"2023-04-19T22:29:52.081Z"}
+{"level":"info","message":"[usuarioControllers] - payload: {\"nome\":\"inferno\",\"email\":\"dhadfhb@gmail.com\",\"senha\":\"654321\",\"endereco\":\"porta do inferno, 666\",\"telefone\":\"00 99999-9999\"}","service":"hamburguergama","timestamp":"2023-04-19T22:29:52.085Z"}
+{"level":"error","message":"[usuariosControllers] error: SequelizeUniqueConstraintError: Validation error","service":"hamburguergama","timestamp":"2023-04-19T22:29:52.210Z"}
+{"level":"info","message":"[usuarioControllers] - Usuario criado com sucesso","service":"hamburguergama","timestamp":"2023-04-19T22:30:08.592Z"}
+{"level":"info","message":"[usuarioControllers] - payload: {\"nome\":\"inferno\",\"email\":\"dasd@gmail.com\",\"senha\":\"654321\",\"endereco\":\"porta do inferno, 666\",\"telefone\":\"00 99999-9999\"}","service":"hamburguergama","timestamp":"2023-04-19T22:30:08.592Z"}
+{"level":"info","message":"[usuarioControllers] - Usuario adicionado com sucesso!! ;) ","service":"hamburguergama","timestamp":"2023-04-19T22:30:08.680Z"}
+{"level":"info","message":"[usuarioControllers] - Usuario criado com sucesso","service":"hamburguergama","timestamp":"2023-04-19T22:37:32.223Z"}
+{"level":"info","message":"[usuarioControllers] - payload: {\"nome\":\"inferno\",\"email\":\"sgsgrsg@gmail.com\",\"senha\":\"fsfs\",\"endereco\":\"porta do inferno, 666\",\"telefone\":\"00 99999-9999\"}","service":"hamburguergama","timestamp":"2023-04-19T22:37:32.224Z"}
+{"level":"info","message":"[usuarioControllers] - Usuario adicionado com sucesso!! ;) ","service":"hamburguergama","timestamp":"2023-04-19T22:37:32.303Z"}
+{"level":"info","message":"[usuarioControllers] - Usuario criado com sucesso","service":"hamburguergama","timestamp":"2023-04-19T22:38:30.263Z"}
+{"level":"info","message":"[usuarioControllers] - payload: {\"nome\":\"inferno\",\"email\":\"dfgh@gmail.com\",\"senha\":\"12345\",\"endereco\":\"porta do inferno, 666\",\"telefone\":\"00 99999-9999\"}","service":"hamburguergama","timestamp":"2023-04-19T22:38:30.263Z"}
+{"level":"info","message":"[usuarioControllers] - Usuario adicionado com sucesso!! ;) ","service":"hamburguergama","timestamp":"2023-04-19T22:38:30.335Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-19T23:54:02.687Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-19T23:54:02.704Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-19T23:54:02.704Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-19T23:54:02.722Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-19T23:54:12.949Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-19T23:54:12.955Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-19T23:54:12.956Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-19T23:54:12.961Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-19T23:54:18.117Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-19T23:54:18.124Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-19T23:54:18.125Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-19T23:54:18.131Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-19T23:54:24.579Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-19T23:54:24.587Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-19T23:54:24.587Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-19T23:54:24.593Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-19T23:54:38.463Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-19T23:54:38.469Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-19T23:54:38.470Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-19T23:54:38.473Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-20T13:45:04.409Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-20T13:45:04.414Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-20T13:45:04.416Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-20T13:45:04.421Z"}
+{"level":"info","message":"[usuarioControllers] - Usuario criado com sucesso","service":"hamburguergama","timestamp":"2023-04-20T13:45:59.048Z"}
+{"level":"info","message":"[usuarioControllers] - payload: {\"nome\":\"Tio Lulu\",\"email\":\"cerberus@gmail.com\",\"senha\":\"666666\",\"endereco\":\"porta do inferno, 666\",\"telefone\":\"00 99999-9999\"}","service":"hamburguergama","timestamp":"2023-04-20T13:45:59.062Z"}
+{"level":"error","message":"[usuariosControllers] error: SequelizeDatabaseError: Unknown column 'createdAt' in 'field list'","service":"hamburguergama","timestamp":"2023-04-20T13:46:00.495Z"}
+{"level":"info","message":"[usuarioControllers] - Usuario criado com sucesso","service":"hamburguergama","timestamp":"2023-04-20T13:47:22.813Z"}
+{"level":"info","message":"[usuarioControllers] - payload: {\"nome\":\"Tio Lulu\",\"email\":\"cerberus@gmail.com\",\"senha\":\"666666\",\"endereco\":\"porta do inferno, 666\",\"telefone\":\"00 99999-9999\"}","service":"hamburguergama","timestamp":"2023-04-20T13:47:22.814Z"}
+{"level":"error","message":"[usuariosControllers] error: SequelizeDatabaseError: Unknown column 'createdAt' in 'field list'","service":"hamburguergama","timestamp":"2023-04-20T13:47:22.882Z"}
+{"level":"info","message":"[usuarioControllers] - Usuario criado com sucesso","service":"hamburguergama","timestamp":"2023-04-20T13:54:57.756Z"}
+{"level":"info","message":"[usuarioControllers] - payload: {\"nome\":\"Tio Lulu\",\"email\":\"cerberus@gmail.com\",\"senha\":\"666666\",\"endereco\":\"porta do inferno, 666\",\"telefone\":\"00 99999-9999\"}","service":"hamburguergama","timestamp":"2023-04-20T13:54:57.756Z"}
+{"level":"error","message":"[usuariosControllers] error: SequelizeDatabaseError: Unknown column 'createdAt' in 'field list'","service":"hamburguergama","timestamp":"2023-04-20T13:54:57.821Z"}
+{"level":"info","message":"[usuarioControllers] - Usuario criado com sucesso","service":"hamburguergama","timestamp":"2023-04-20T13:55:02.080Z"}
+{"level":"info","message":"[usuarioControllers] - payload: {\"nome\":\"Tio Lulu\",\"email\":\"g@gmail.com\",\"senha\":\"666666\",\"endereco\":\"porta do inferno, 666\",\"telefone\":\"00 99999-9999\"}","service":"hamburguergama","timestamp":"2023-04-20T13:55:02.080Z"}
+{"level":"error","message":"[usuariosControllers] error: SequelizeDatabaseError: Unknown column 'createdAt' in 'field list'","service":"hamburguergama","timestamp":"2023-04-20T13:55:02.137Z"}
+{"level":"info","message":"[usuarioControllers] - Usuario criado com sucesso","service":"hamburguergama","timestamp":"2023-04-20T13:56:00.617Z"}
+{"level":"info","message":"[usuarioControllers] - payload: {\"nome\":\"Tio Lulu\",\"email\":\"g@gmail.com\",\"senha\":\"666666\",\"endereco\":\"porta do inferno, 666\",\"telefone\":\"00 99999-9999\"}","service":"hamburguergama","timestamp":"2023-04-20T13:56:00.618Z"}
+{"level":"error","message":"[usuariosControllers] error: SequelizeDatabaseError: Unknown column 'createdAt' in 'field list'","service":"hamburguergama","timestamp":"2023-04-20T13:56:00.676Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-20T13:57:46.930Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-20T13:57:46.936Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-20T13:57:46.936Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-20T13:57:46.939Z"}
+{"level":"info","message":"[usuarioControllers] - Usuario criado com sucesso","service":"hamburguergama","timestamp":"2023-04-20T13:58:05.860Z"}
+{"level":"info","message":"[usuarioControllers] - payload: {\"nome\":\"Tio Lulu\",\"email\":\"ijijij@gmail.com\",\"senha\":\"666666\",\"endereco\":\"porta do inferno, 666\",\"telefone\":\"00 99999-9999\"}","service":"hamburguergama","timestamp":"2023-04-20T13:58:05.861Z"}
+{"level":"error","message":"[usuariosControllers] error: SequelizeDatabaseError: Unknown column 'createdAt' in 'field list'","service":"hamburguergama","timestamp":"2023-04-20T13:58:06.001Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-20T14:05:55.708Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-20T14:05:55.714Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-20T14:05:55.714Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-20T14:05:55.719Z"}

@@ -1,8 +1,8 @@
 import supertest from 'supertest';
-import express from 'express';
+import express, { Request, Response } from 'express';
 import Sequelize from 'sequelize';
-import ClientesModel, { clientes } from '../../../src/models/usuarios';
-import usuariosController from '../../../src/controllers/controllerUsuario';
+import Clientes from '../models/usuarios';
+import usuariosController from '../controllers/controllerUsuario';
 
 describe('Usuarios Controller', () => {    
     afterEach(() => {
@@ -10,11 +10,11 @@ describe('Usuarios Controller', () => {
         jest.clearAllMocks();
       });
 
-    const usuarioMock: clientes = { id: 1, nome: 'Usuario Teste', email: 'email@test.com', senha: 123, endereco: 'Endereço teste', telefone: 123456 }
+    const usuarioMock: Clientes = { id: 1, nome: 'Usuario Teste', email: 'email@test.com', senha: 123, endereco: 'Endereço teste', telefone: 123456 }
 
     describe('função create', () => {
         it('Deve criar um novo pedido', async () => {
-          jest.spyOn(ClientesModel, 'create').mockResolvedValue(usuarioMock);
+          jest.spyOn(Clientes, 'create').mockResolvedValue(usuarioMock);
       
           const req = {
             body: {
@@ -24,7 +24,7 @@ describe('Usuarios Controller', () => {
                 endereco: 'Endereço teste',
                 telefone: 123456
             }
-          };
+          } as unknown as Request;
           const res = {
             status: jest.fn().mockReturnThis(),
             json: jest.fn(),
@@ -37,7 +37,7 @@ describe('Usuarios Controller', () => {
         });
     
         it('Deve retornar um erro 500', async () => {
-            jest.spyOn(ClientesModel, 'create').mockRejectedValue(null);
+            jest.spyOn(Clientes, 'create').mockRejectedValue(null);
       
             const req = {
               body: {
@@ -47,7 +47,7 @@ describe('Usuarios Controller', () => {
                   endereco: 'Endereço teste',
                   telefone: 123456
               }
-            };
+            } as unknown as Request;
             const res = {
               status: jest.fn().mockReturnThis(),
               json: jest.fn(),
@@ -62,7 +62,7 @@ describe('Usuarios Controller', () => {
     
     describe('função list', () => {
         it('Deve listar todos os usuários', async () => {
-          jest.spyOn(ClientesModel, 'findAll').mockResolvedValue([usuarioMock]);
+          jest.spyOn(Clientes, 'findAll').mockResolvedValue([usuarioMock]);
       
           const req = {
             body: {
@@ -72,7 +72,7 @@ describe('Usuarios Controller', () => {
                 endereco: 'Endereço teste',
                 telefone: 123456
             }
-          };
+          }as unknown as Request;
           const res = {
             status: jest.fn().mockReturnThis(),
             json: jest.fn(),
@@ -85,7 +85,7 @@ describe('Usuarios Controller', () => {
         });
     
         it('Deve retornar um erro 500', async () => {
-            jest.spyOn(ClientesModel, 'findAll').mockRejectedValue(null);
+            jest.spyOn(Clientes, 'findAll').mockRejectedValue(null);
       
             const req = {
               body: {
@@ -95,7 +95,7 @@ describe('Usuarios Controller', () => {
                   endereco: 'Endereço teste',
                   telefone: 123456
               }
-            };
+            } as unknown as Request;
             const res = {
               status: jest.fn().mockReturnThis(),
               json: jest.fn(),
@@ -110,11 +110,11 @@ describe('Usuarios Controller', () => {
     
     describe('função getUsuarioID', () => {
         it('Deve buscar um usuário', async () => {
-          jest.spyOn(ClientesModel, 'findByPk').mockResolvedValue(usuarioMock);
+          jest.spyOn(Clientes, 'findByPk').mockResolvedValue(usuarioMock);
       
           const req = {
             params: 1
-          };
+          } as unknown as Request;
           const res = {
             status: jest.fn().mockReturnThis(),
             json: jest.fn(),
@@ -128,7 +128,7 @@ describe('Usuarios Controller', () => {
     
     describe('função update', () => {
         it('Deve atualizar um usuários', async () => {
-          jest.spyOn(ClientesModel, 'findByPk').mockResolvedValue({
+          jest.spyOn(Clientes, 'findByPk').mockResolvedValue({
             update: jest.fn()
           });
       
@@ -141,7 +141,7 @@ describe('Usuarios Controller', () => {
                 email: 'email@test.com',
                 senha: 123,
             }
-          };
+          } as unknown as Request;
           const res = {
             status: jest.fn().mockReturnThis(),
             json: jest.fn(),
@@ -154,7 +154,7 @@ describe('Usuarios Controller', () => {
         });
 
         it('Deve retornar 404 se não encontrar um usuário', async () => {
-          jest.spyOn(ClientesModel, 'findByPk').mockResolvedValue(null);
+          jest.spyOn(Clientes, 'findByPk').mockResolvedValue(null);
       
           const req = {
             params: {
@@ -165,7 +165,7 @@ describe('Usuarios Controller', () => {
                 email: 'email@test.com',
                 senha: 123,
             }
-          };
+          } as unknown as Request;
           const res = {
             status: jest.fn().mockReturnThis(),
             json: jest.fn(),
@@ -178,7 +178,7 @@ describe('Usuarios Controller', () => {
         });
     
         it('Deve retornar um erro 500', async () => {
-            jest.spyOn(ClientesModel, 'findByPk').mockRejectedValue(null);
+            jest.spyOn(Clientes, 'findByPk').mockRejectedValue(null);
       
             const req = {
               params: {
@@ -189,7 +189,7 @@ describe('Usuarios Controller', () => {
                   email: 'email@test.com',
                   senha: 123,
               }
-            };
+            } as unknown as Request;
             const res = {
               status: jest.fn().mockReturnThis(),
               json: jest.fn(),
@@ -204,7 +204,7 @@ describe('Usuarios Controller', () => {
     
     describe('função delete', () => {
         it('Deve remover um usuários', async () => {
-          jest.spyOn(ClientesModel, 'findByPk').mockResolvedValue({
+          jest.spyOn(Clientes, 'findByPk').mockResolvedValue({
             destroy: jest.fn()
           });
       
@@ -212,7 +212,7 @@ describe('Usuarios Controller', () => {
             params: {
                 id: 1
             },
-          };
+          } as unknown as Request;
           const res = {
             status: jest.fn().mockReturnThis(),
             json: jest.fn(),
@@ -225,13 +225,13 @@ describe('Usuarios Controller', () => {
         });
 
         it('Deve retornar 404 se não encontrar um usuário', async () => {
-          jest.spyOn(ClientesModel, 'findByPk').mockResolvedValue(null);
+          jest.spyOn(Clientes, 'findByPk').mockResolvedValue(null);
       
           const req = {
             params: {
                 id: 1
             },
-          };
+          } as unknown as Request;
           const res = {
             status: jest.fn().mockReturnThis(),
             json: jest.fn(),
@@ -244,13 +244,13 @@ describe('Usuarios Controller', () => {
         });
     
         it('Deve retornar um erro 500', async () => {
-            jest.spyOn(ClientesModel, 'findByPk').mockRejectedValue(null);
+            jest.spyOn(Clientes, 'findByPk').mockRejectedValue(null);
       
             const req = {
               params: {
                   id: 1
               },
-            };
+            } as unknown as Request;
             const res = {
               status: jest.fn().mockReturnThis(),
               json: jest.fn(),

@@ -1,8 +1,7 @@
-import { DataTypes, IntegerDataType, ModelDefined, Optional } from "sequelize"
+import { DataTypes, IntegerDataType, Model, ModelDefined, Optional } from "sequelize"
 import db from "../database/db"
-
-export interface Pedidos{
-  id:number
+interface PedidosAttributes{
+  id?:number | null
   descricao: string
   nome_user: string
   valor_total:number
@@ -10,11 +9,16 @@ export interface Pedidos{
   updated_at: Date
 }
 
+class Pedidos extends Model<PedidosAttributes> implements PedidosAttributes{
+  public id!: number | null;
+  public descricao!: string;
+  public nome_user!: string;
+  public valor_total!: number;
+  public readonly created_at!: Date;
+  public readonly updated_at!: Date;
+}
 
-type PedidosCreation = Optional<Pedidos, 'id' | 'created_at' | 'updated_at'>
-
-
-export const PedidosModel: ModelDefined<Pedidos, PedidosCreation> = db.define("Pedidos", {
+Pedidos.init({
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -24,7 +28,7 @@ export const PedidosModel: ModelDefined<Pedidos, PedidosCreation> = db.define("P
     type: DataTypes.STRING,
   },
  valor_total:{
-type:DataTypes.DECIMAL
+    type:DataTypes.DECIMAL
  },
   descricao: {
     type: DataTypes.STRING,
@@ -35,9 +39,11 @@ type:DataTypes.DECIMAL
   updated_at: {
     type: DataTypes.DATE,
   },
-}, {
+}, 
+{
   tableName: 'pedidos',
-  timestamps: false
-})
+  sequelize: db
+}
+);
 
-export default PedidosModel
+export default Pedidos

@@ -1,8 +1,8 @@
 import supertest from 'supertest';
-import express from 'express';
+import express, { Response, Request } from 'express';
 import Sequelize from 'sequelize';
-import ProdutosModel, { Produtos } from '../../../src/models/produtos';
-import produtosController from '../../../src/controllers/controllerProdutos';
+import Produtos from '../models/produtos';
+import produtosController from '../controllers/controllerProdutos';
 
 describe('Produtos Controller', () => {    
     afterEach(() => {
@@ -14,7 +14,7 @@ describe('Produtos Controller', () => {
 
     describe('função create', () => {
         it('Deve criar um novo produto', async () => {
-          jest.spyOn(ProdutosModel, 'create').mockResolvedValue(produtoMock);
+          jest.spyOn(Produtos, 'create').mockResolvedValue(produtoMock);
       
           const req = {
             body: {
@@ -22,7 +22,7 @@ describe('Produtos Controller', () => {
                 preco: '10.00',
                 descricao: 'Teste descricao'
             }
-          };
+          } as unknown as Request;
           const res = {
             status: jest.fn().mockReturnThis(),
             json: jest.fn(),
@@ -34,7 +34,7 @@ describe('Produtos Controller', () => {
         });
     
         it('Deve retornar um erro 500', async () => {
-            jest.spyOn(ProdutosModel, 'create').mockRejectedValue(null);
+            jest.spyOn(Produtos, 'create').mockRejectedValue(null);
       
             const req = {
               body: {
@@ -42,7 +42,7 @@ describe('Produtos Controller', () => {
                   preco: '10.00',
                   descricao: 'Teste descricao'
               }
-            };
+            } as unknown as Request;
             const res = {
               status: jest.fn().mockReturnThis(),
               json: jest.fn(),
@@ -57,7 +57,7 @@ describe('Produtos Controller', () => {
     
     describe('função list', () => {
         it('Deve listar todos os produtos', async () => {
-          jest.spyOn(ProdutosModel, 'findAll').mockResolvedValue([produtoMock]);
+          jest.spyOn(Produtos, 'findAll').mockResolvedValue([produtoMock]);
       
           const req = {
             body: {
@@ -65,7 +65,7 @@ describe('Produtos Controller', () => {
                 preco: '10.00',
                 descricao: 'Teste descricao'
             }
-          };
+          }as unknown as Request;
           const res = {
             status: jest.fn().mockReturnThis(),
             json: jest.fn(),
@@ -77,7 +77,7 @@ describe('Produtos Controller', () => {
         });
     
         it('Deve retornar um erro 500', async () => {
-            jest.spyOn(ProdutosModel, 'findAll').mockRejectedValue(null);
+            jest.spyOn(Produtos, 'findAll').mockRejectedValue(null);
       
             const req = {
               body: {
@@ -85,7 +85,7 @@ describe('Produtos Controller', () => {
                   preco: '10.00',
                   descricao: 'Teste descricao'
               }
-            };
+            }as unknown as Request;
             const res = {
               status: jest.fn().mockReturnThis(),
               json: jest.fn(),
@@ -100,7 +100,7 @@ describe('Produtos Controller', () => {
     
     describe('função update', () => {
         it('Deve atualizar um produto', async () => {
-          jest.spyOn(ProdutosModel, 'findByPk').mockResolvedValue({
+          jest.spyOn(Produtos, 'findByPk').mockResolvedValue({
             update: jest.fn()
           });
       
@@ -113,7 +113,7 @@ describe('Produtos Controller', () => {
                 preco: '10.00',
                 descricao: 'Teste descricao'
             }
-          };
+          }as unknown as Request;
           const res = {
             status: jest.fn().mockReturnThis(),
             json: jest.fn(),
@@ -126,7 +126,7 @@ describe('Produtos Controller', () => {
         });
     
         it('Deve retornar um erro 500', async () => {
-            jest.spyOn(ProdutosModel, 'findByPk').mockRejectedValue(null);
+            jest.spyOn(Produtos, 'findByPk').mockRejectedValue(null);
           
               const req = {
                 params: {
@@ -137,7 +137,7 @@ describe('Produtos Controller', () => {
                     preco: '10.00',
                     descricao: 'Teste descricao'
                 }
-              };
+              }as unknown as Request;
               const res = {
                 status: jest.fn().mockReturnThis(),
                 json: jest.fn(),
@@ -152,7 +152,7 @@ describe('Produtos Controller', () => {
     
     describe('função delete', () => {
         it('Deve deletar um produto', async () => {
-          jest.spyOn(ProdutosModel, 'findByPk').mockResolvedValue({
+          jest.spyOn(Produtos, 'findByPk').mockResolvedValue({
             destroy: jest.fn()
           });
       
@@ -160,7 +160,7 @@ describe('Produtos Controller', () => {
             params: {
                 id: 1
             },
-          };
+          }as unknown as Request;
           const res = {
             status: jest.fn().mockReturnThis(),
             json: jest.fn(),
@@ -173,13 +173,13 @@ describe('Produtos Controller', () => {
         });
         
         it('Deve retornar 404 se não encontrar um produto', async () => {
-          jest.spyOn(ProdutosModel, 'findByPk').mockResolvedValue(null);
+          jest.spyOn(Produtos, 'findByPk').mockResolvedValue(null);
       
           const req = {
             params: {
                 id: 1
             },
-          };
+          }as unknown as Request;
           const res = {
             status: jest.fn().mockReturnThis(),
             json: jest.fn(),
@@ -192,13 +192,13 @@ describe('Produtos Controller', () => {
         });
     
         it('Deve retornar um erro 500', async () => {
-            jest.spyOn(ProdutosModel, 'findByPk').mockRejectedValue(null);
+            jest.spyOn(Produtos, 'findByPk').mockRejectedValue(null);
           
             const req = {
             params: {
                 id: 1
             },
-            };
+            }as unknown as Request;
             const res = {
             status: jest.fn().mockReturnThis(),
             json: jest.fn(),

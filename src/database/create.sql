@@ -6,7 +6,9 @@ CREATE TABLE clientes (
   endereco VARCHAR(255) NOT NULL,
   telefone VARCHAR(20) NOT NULL,
   email VARCHAR(255) UNIQUE,
-  senha VARCHAR(255)
+  senha VARCHAR(255),
+  createdAt datetime NOT NULL,
+  updatedAt datetime NOT NULL
 );
 
 CREATE TABLE funcionarios (

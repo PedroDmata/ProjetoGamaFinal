@@ -1,8 +1,7 @@
-import supertest from 'supertest';
-import express from 'express';
-import Sequelize from 'sequelize';
-import Pedidos, { Pedidos as PedidoType } from '../../../src/models/pedidos';
-import pedidosController from '../../../src/controllers/controllerpedidos';
+import { Request, Response } from 'express';
+import Pedidos from '../models/pedidos';
+import pedidosController from '../controllers/controllerpedidos';
+
 
 describe('Pedidos Controller', () => {    
     afterEach(() => {
@@ -10,7 +9,7 @@ describe('Pedidos Controller', () => {
         jest.clearAllMocks();
       });
 
-    const pedidoMock: PedidoType = { id: 1, nome_user: 'Usuario Teste', valor_total: 10.1, descricao: 'Teste descricao', created_at: new Date(), updated_at: new Date(), }
+    const pedidoMock: Pedidos = { id: 1, nome_user: 'Usuario Teste', valor_total: 10.1, descricao: 'Teste descricao', created_at: new Date(), updated_at: new Date(), } as Pedidos
 
     describe('função create', () => {
         it('Deve criar um novo pedido', async () => {
@@ -22,7 +21,7 @@ describe('Pedidos Controller', () => {
                 valor_total: 10.1,
                 descricao: 'Teste descricao'
             }
-          };
+          } as unknown as Request;
           const res = {
             status: jest.fn().mockReturnThis(),
             json: jest.fn(),
@@ -42,7 +41,7 @@ describe('Pedidos Controller', () => {
                   valor_total: 10.1,
                   descricao: 'Teste descricao'
               }
-            };
+            } as unknown as Request;
             const res = {
               status: jest.fn().mockReturnThis(),
               json: jest.fn(),
@@ -65,7 +64,7 @@ describe('Pedidos Controller', () => {
                 valor_total: 10.1,
                 descricao: 'Teste descricao'
             }
-          };
+          } as unknown as Request;
           const res = {
             status: jest.fn().mockReturnThis(),
             json: jest.fn(),
@@ -85,7 +84,7 @@ describe('Pedidos Controller', () => {
                   valor_total: 10.1,
                   descricao: 'Teste descricao'
               }
-            };
+            } as unknown as Request;
             const res = {
               status: jest.fn().mockReturnThis(),
               json: jest.fn(),
@@ -106,7 +105,7 @@ describe('Pedidos Controller', () => {
             params: {
                 id: 1
             }
-          };
+          } as unknown as Request;
           const res = {
             status: jest.fn().mockReturnThis(),
             json: jest.fn(),
@@ -120,8 +119,7 @@ describe('Pedidos Controller', () => {
     
     describe('função updatepedido', () => {
         it('Deve atualizar um pedido', async () => {
-          jest.spyOn(Pedidos, 'findByPk').mockResolvedValue({
-            update: jest.fn()
+          jest.spyOn(Pedidos, 'findByPk').mockResolvedValue({update: jest.fn()
           });
       
           const req = {
@@ -132,7 +130,7 @@ describe('Pedidos Controller', () => {
                 valor_total: 10.1,
                 descricao: 'Teste descricao'
             }
-          };
+          } as unknown as Request;
           const res = {
             status: jest.fn().mockReturnThis(),
             json: jest.fn(),
@@ -154,7 +152,7 @@ describe('Pedidos Controller', () => {
                     valor_total: 10.1,
                     descricao: 'Teste descricao'
                 }
-            };
+            } as unknown as Request;
             const res = {
                 status: jest.fn().mockReturnThis(),
                 json: jest.fn(),
@@ -177,7 +175,7 @@ describe('Pedidos Controller', () => {
                     valor_total: 10.1,
                     descricao: 'Teste descricao'
                 }
-            };
+            } as unknown as Request;
             const res = {
                 status: jest.fn().mockReturnThis(),
                 json: jest.fn(),
