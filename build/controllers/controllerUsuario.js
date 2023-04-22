@@ -15,12 +15,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const index_1 = __importDefault(require("../logger/index"));
 const usuarios_1 = __importDefault(require("../models/usuarios"));
 const bcrypt_1 = require("bcrypt");
+const jsonwebtoken_1 = require("jsonwebtoken");
 //criando usuario
 const usuariosControllers = {
     create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                index_1.default.info("[usuarioControllers] - Usuario criado com sucesso");
                 const { nome, email, senha, endereco, telefone } = req.body;
                 index_1.default.info(`[usuarioControllers] - payload: ${JSON.stringify(Object.assign({}, req.body))}`);
                 const passwordHash = yield (0, bcrypt_1.hash)(senha, 10);
@@ -29,7 +29,9 @@ const usuariosControllers = {
                     email,
                     senha: passwordHash,
                     endereco,
-                    telefone
+                    telefone,
+                    createdAt: new Date(),
+                    updatedAt: new Date()
                 });
                 index_1.default.info("[usuarioControllers] - Usuario adicionado com sucesso!! ;) ");
                 return res.json(newUsers);
@@ -99,6 +101,30 @@ const usuariosControllers = {
             catch (error) {
                 console.log(error);
                 return res.status(500).json("A algo de errado!!");
+            }
+        });
+    },
+    // login de usuario
+    login(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const { email, senha } = req.body;
+                const usuario = yield usuarios_1.default.findOne({
+                    where: { email }
+                });
+                if (!usuario) {
+                    return res.status(401).json("Usuário não encontrado");
+                }
+                const senhaCorreta = yield (0, bcrypt_1.compare)(senha, usuario.senha);
+                if (!senhaCorreta) {
+                    return res.status(401).json("Senha incorreta");
+                }
+                const token = (0, jsonwebtoken_1.sign)({ userId: usuario.id, email: usuario.email }, process.env.JWT_SECRET, { expiresIn: '1h' });
+                return res.json({ token });
+            }
+            catch (error) {
+                console.log(error);
+                return res.status(500).json("A algo errado!");
             }
         });
     },

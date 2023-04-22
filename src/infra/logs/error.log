@@ -21,3 +21,8 @@
 {"level":"error","message":"[usuariosControllers] error: SequelizeDatabaseError: Unknown column 'createdAt' in 'field list'","service":"hamburguergama","timestamp":"2023-04-20T13:55:02.137Z"}
 {"level":"error","message":"[usuariosControllers] error: SequelizeDatabaseError: Unknown column 'createdAt' in 'field list'","service":"hamburguergama","timestamp":"2023-04-20T13:56:00.676Z"}
 {"level":"error","message":"[usuariosControllers] error: SequelizeDatabaseError: Unknown column 'createdAt' in 'field list'","service":"hamburguergama","timestamp":"2023-04-20T13:58:06.001Z"}
+{"level":"error","message":"[usuariosControllers] error: Error: data must be a string or Buffer and salt must either be a salt string or a number of rounds","service":"hamburguergama","timestamp":"2023-04-22T21:06:38.864Z"}
+{"level":"error","message":"[usuariosControllers] error: Error: data must be a string or Buffer and salt must either be a salt string or a number of rounds","service":"hamburguergama","timestamp":"2023-04-22T21:10:46.836Z"}
+{"level":"error","message":"[usuariosControllers] error: Error: data must be a string or Buffer and salt must either be a salt string or a number of rounds","service":"hamburguergama","timestamp":"2023-04-22T21:15:02.942Z"}
+{"level":"error","message":"[usuariosControllers] error: Error: data must be a string or Buffer and salt must either be a salt string or a number of rounds","service":"hamburguergama","timestamp":"2023-04-22T21:16:23.061Z"}
+{"level":"error","message":"[usuariosControllers] error: Error: data must be a string or Buffer and salt must either be a salt string or a number of rounds","service":"hamburguergama","timestamp":"2023-04-22T21:18:21.226Z"}
