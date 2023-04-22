@@ -29,9 +29,9 @@ routes.get('/pedidos', authMiddleware_1.authMiddleware, controllerpedidos_1.defa
 routes.get('/pedidos:id', authMiddleware_1.authMiddleware, controllerpedidos_1.default.getpedidoid);
 // rotas usuarios
 routes.post("/login", controllerUsuario_1.default.login);
+routes.post("/usuario", controllerUsuario_1.default.create);
 routes.get("/usuario", authMiddleware_1.authMiddleware, controllerUsuario_1.default.list);
 routes.get("/usuario/:id", authMiddleware_1.authMiddleware, controllerUsuario_1.default.getUsuarioID);
-routes.post("/usuario", controllerUsuario_1.default.create);
 routes.put("/usuario/:id", authMiddleware_1.authMiddleware, controllerUsuario_1.default.update);
 routes.delete("/usuario/:id", authMiddleware_1.authMiddleware, controllerUsuario_1.default.delete);
 exports.default = routes;

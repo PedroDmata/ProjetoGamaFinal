@@ -34,10 +34,10 @@ routes.get('/pedidos:id', authMiddleware, controller.getpedidoid);
 // rotas usuarios
 
 routes.post("/login", usuariosControllers.login);
+routes.post("/usuario", usuariosControllers.create);
 
 routes.get("/usuario", authMiddleware, usuariosControllers.list);
 routes.get("/usuario/:id", authMiddleware, usuariosControllers.getUsuarioID);
-routes.post("/usuario", usuariosControllers.create);
 routes.put("/usuario/:id", authMiddleware, usuariosControllers.update);
 routes.delete("/usuario/:id", authMiddleware, usuariosControllers.delete);
 
