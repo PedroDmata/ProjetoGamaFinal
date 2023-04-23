@@ -6,10 +6,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const requestLog_1 = __importDefault(require("../middlewares/requestLog"));
 const controllerProdutos_1 = __importDefault(require("../controllers/controllerProdutos"));
-const controllerpedidos_1 = __importDefault(require("../controllers/controllerpedidos"));
 const controllerUsuario_1 = __importDefault(require("../controllers/controllerUsuario"));
 const categoriasController_1 = __importDefault(require("../controllers/categoriasController"));
 const authMiddleware_1 = require("./authMiddleware");
+const controllerFuncionario_1 = __importDefault(require("../controllers/controllerFuncionario"));
+const controllerpedidos_1 = __importDefault(require("../controllers/controllerpedidos"));
 const routes = (0, express_1.Router)();
 //rotas categorias
 routes.get('/categoria', authMiddleware_1.authMiddleware, requestLog_1.default, categoriasController_1.default.listarCategoria);
@@ -27,6 +28,8 @@ routes.delete("/produtos/:id", authMiddleware_1.authMiddleware, controllerProdut
 routes.post('/pedidos', authMiddleware_1.authMiddleware, controllerpedidos_1.default.create);
 routes.get('/pedidos', authMiddleware_1.authMiddleware, controllerpedidos_1.default.list);
 routes.get('/pedidos:id', authMiddleware_1.authMiddleware, controllerpedidos_1.default.getpedidoid);
+routes.put('/pedidos:id', authMiddleware_1.authMiddleware, controllerpedidos_1.default.updatepedido);
+routes.delete('/pedidos:id', authMiddleware_1.authMiddleware, controllerpedidos_1.default.delete);
 // rotas usuarios
 routes.post("/login", controllerUsuario_1.default.login);
 routes.post("/usuario", controllerUsuario_1.default.create);
@@ -34,4 +37,11 @@ routes.get("/usuario", authMiddleware_1.authMiddleware, controllerUsuario_1.defa
 routes.get("/usuario/:id", authMiddleware_1.authMiddleware, controllerUsuario_1.default.getUsuarioID);
 routes.put("/usuario/:id", authMiddleware_1.authMiddleware, controllerUsuario_1.default.update);
 routes.delete("/usuario/:id", authMiddleware_1.authMiddleware, controllerUsuario_1.default.delete);
+//rotas funcionarios
+routes.post("/funcionario", controllerFuncionario_1.default.create);
+routes.post("/login/funcionario", controllerFuncionario_1.default.loginf);
+routes.get("/funcionario", authMiddleware_1.authMiddleware, controllerUsuario_1.default.list);
+routes.get("/funcionario/:id", authMiddleware_1.authMiddleware, controllerUsuario_1.default.getUsuarioID);
+routes.put("/funcionario/:id", authMiddleware_1.authMiddleware, controllerUsuario_1.default.update);
+routes.delete("/funcionario/:id", authMiddleware_1.authMiddleware, controllerUsuario_1.default.delete);
 exports.default = routes;
