@@ -8,12 +8,12 @@ const produtosControllers = {
   async create(req: Request, res: Response) {
     try {
       logger.info("[produtosControllers] - Produto adicionado ao carrinho");
-      const { nome_produto, descricao, preco } = req.body;
+      const { nome, descricao, preco } = req.body;
       logger.info(`[produtosControllers] - payload: ${JSON.stringify(Object.assign({}, req.body))}`
       );
 
       const newProduto = await Produtos.create({
-        nome_produto,
+        nome,
         descricao,
         preco,
       });
@@ -58,7 +58,7 @@ const produtosControllers = {
   async update(req: Request, res: Response) {
     try {
       const { id } = req.params;
-      const { nome_produto, descricao, preco } = req.body;
+      const { nome, descricao, preco } = req.body;
 
       const produto = await Produtos.findByPk(id);
 
@@ -66,7 +66,7 @@ const produtosControllers = {
         return res.status(404).json("Produto não encontrado");
       }
 
-      await produto.update({ nome_produto, descricao, preco });
+      await produto.update({ nome, descricao, preco });
 
       return res.json(produto);
     } catch (error) {

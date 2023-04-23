@@ -26,3 +26,33 @@
 {"level":"error","message":"[usuariosControllers] error: Error: data must be a string or Buffer and salt must either be a salt string or a number of rounds","service":"hamburguergama","timestamp":"2023-04-22T21:15:02.942Z"}
 {"level":"error","message":"[usuariosControllers] error: Error: data must be a string or Buffer and salt must either be a salt string or a number of rounds","service":"hamburguergama","timestamp":"2023-04-22T21:16:23.061Z"}
 {"level":"error","message":"[usuariosControllers] error: Error: data must be a string or Buffer and salt must either be a salt string or a number of rounds","service":"hamburguergama","timestamp":"2023-04-22T21:18:21.226Z"}
+{"level":"error","message":"[usuariosControllers] error: SequelizeAccessDeniedError: Access denied for user ''@'localhost' (using password: YES)","service":"hamburguergama","timestamp":"2023-04-23T00:09:30.723Z"}
+{"level":"error","message":"[usuariosControllers] error: SequelizeUniqueConstraintError: Validation error","service":"hamburguergama","timestamp":"2023-04-23T00:10:17.681Z"}
+{"level":"error","message":"[usuariosControllers] error: SequelizeUniqueConstraintError: Validation error","service":"hamburguergama","timestamp":"2023-04-23T00:12:29.850Z"}
+{"level":"error","message":"[usuariosControllers] error: SequelizeUniqueConstraintError: Validation error","service":"hamburguergama","timestamp":"2023-04-23T00:17:46.935Z"}
+{"level":"error","message":"[usuariosControllers] error: SequelizeUniqueConstraintError: Validation error","service":"hamburguergama","timestamp":"2023-04-23T00:18:44.591Z"}
+{"level":"error","message":"[usuariosControllers] error: SequelizeUniqueConstraintError: Validation error","service":"hamburguergama","timestamp":"2023-04-23T00:19:49.330Z"}
+{"level":"error","message":"[usuariosControllers] error: SequelizeUniqueConstraintError: Validation error","service":"hamburguergama","timestamp":"2023-04-23T00:21:07.294Z"}
+{"level":"error","message":"[usuariosControllers] error: SequelizeUniqueConstraintError: Validation error","service":"hamburguergama","timestamp":"2023-04-23T00:31:14.381Z"}
+{"level":"error","message":"[usuariosControllers] error: SequelizeUniqueConstraintError: Validation error","service":"hamburguergama","timestamp":"2023-04-23T00:55:51.569Z"}
+{"level":"error","message":"[usuariosControllers] error: SequelizeUniqueConstraintError: Validation error","service":"hamburguergama","timestamp":"2023-04-23T00:58:19.504Z"}
+{"level":"error","message":"[usuariosControllers] error: SequelizeUniqueConstraintError: Validation error","service":"hamburguergama","timestamp":"2023-04-23T01:00:49.417Z"}
+{"level":"error","message":"[pedidosControllers] error: SequelizeDatabaseError: Unknown column 'nome_produto' in 'field list'","service":"hamburguergama","timestamp":"2023-04-23T01:04:14.994Z"}
+{"level":"error","message":"[pedidosControllers] error: SequelizeDatabaseError: Unknown column 'nome_produto' in 'field list'","service":"hamburguergama","timestamp":"2023-04-23T01:11:59.617Z"}
+{"level":"error","message":"[pedidosControllers] error: SequelizeDatabaseError: Unknown column 'nome_produto' in 'field list'","service":"hamburguergama","timestamp":"2023-04-23T01:13:08.210Z"}
+{"level":"error","message":"[pedidosControllers] error: SequelizeDatabaseError: Unknown column 'nome_produto' in 'field list'","service":"hamburguergama","timestamp":"2023-04-23T01:13:58.257Z"}
+{"level":"error","message":"[pedidosControllers] error: SequelizeDatabaseError: Incorrect decimal value: '2,00' for column 'preco' at row 1","service":"hamburguergama","timestamp":"2023-04-23T01:16:10.443Z"}
+{"level":"error","message":"[pedidosControllers] error: SequelizeDatabaseError: Incorrect decimal value: '22,0' for column 'preco' at row 1","service":"hamburguergama","timestamp":"2023-04-23T01:16:37.461Z"}
+{"level":"error","message":"[pedidosControllers] error: SequelizeDatabaseError: Incorrect decimal value: '10,2' for column 'preco' at row 1","service":"hamburguergama","timestamp":"2023-04-23T01:17:36.229Z"}
+{"level":"error","message":"[pedidosControllers] error: SequelizeDatabaseError: Field 'id_categoria' doesn't have a default value","service":"hamburguergama","timestamp":"2023-04-23T01:17:45.297Z"}
+{"level":"error","message":"[pedidosControllers] error: SequelizeDatabaseError: Field 'id_categoria' doesn't have a default value","service":"hamburguergama","timestamp":"2023-04-23T12:48:58.114Z"}
+{"level":"error","message":"[pedidosControllers] error: SequelizeDatabaseError: Field 'id_categoria' doesn't have a default value","service":"hamburguergama","timestamp":"2023-04-23T12:50:22.831Z"}
+{"level":"error","message":"[funcionarioController] error: SequelizeDatabaseError: Data too long for column 'senha' at row 1","service":"hamburguergama","timestamp":"2023-04-23T18:54:38.160Z"}
+{"level":"error","message":"[funcionarioController] error: SequelizeDatabaseError: Data too long for column 'senha' at row 1","service":"hamburguergama","timestamp":"2023-04-23T18:55:07.405Z"}
+{"level":"error","message":"[funcionarioController] error: SequelizeDatabaseError: Data too long for column 'senha' at row 1","service":"hamburguergama","timestamp":"2023-04-23T18:57:47.884Z"}
+{"level":"error","message":"[funcionarioController] error: SequelizeDatabaseError: Data too long for column 'senha' at row 1","service":"hamburguergama","timestamp":"2023-04-23T18:58:02.101Z"}
+{"level":"error","message":"[funcionarioController] error: SequelizeDatabaseError: Data too long for column 'senha' at row 1","service":"hamburguergama","timestamp":"2023-04-23T19:16:41.706Z"}
+{"level":"error","message":"[funcionarioController] error: SequelizeDatabaseError: Data too long for column 'senha' at row 1","service":"hamburguergama","timestamp":"2023-04-23T19:21:18.315Z"}
+{"level":"error","message":"[funcionarioController] error: SequelizeDatabaseError: Data too long for column 'senha' at row 1","service":"hamburguergama","timestamp":"2023-04-23T20:13:56.080Z"}
+{"level":"error","message":"[pedidosController] error: SequelizeDatabaseError: Unknown column 'created_at' in 'field list'","service":"hamburguergama","timestamp":"2023-04-23T21:36:30.433Z"}
+{"level":"error","message":"[pedidosController] error: SequelizeDatabaseError: Unknown column 'created_at' in 'field list'","service":"hamburguergama","timestamp":"2023-04-23T21:37:25.584Z"}

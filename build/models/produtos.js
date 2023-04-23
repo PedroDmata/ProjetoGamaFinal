@@ -13,7 +13,7 @@ Produtos.init({
         primaryKey: true,
         autoIncrement: true,
     },
-    nome_produto: {
+    nome: {
         type: sequelize_1.DataTypes.STRING,
     },
     descricao: {

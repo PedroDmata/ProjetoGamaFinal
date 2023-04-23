@@ -8,52 +8,56 @@ CREATE TABLE clientes (
   email VARCHAR(255) UNIQUE,
   senha VARCHAR(255),
   createdAt datetime NOT NULL,
-  updatedAt datetime NOT NULL
+  updatedAt datetime NOT NULL
 );
 
 CREATE TABLE funcionarios (
-  id AUTO_INCREMENT INT PRIMARY KEY,
+  id  INT PRIMARY KEY AUTO_INCREMENT,
   nome VARCHAR(255),
-  email VARCHAR(20),
-  senha VARCHAR(20)
+  email VARCHAR(255) UNIQUE,
+  senha VARCHAR(255),
+  createdAt datetime NOT NULL,
+  updatedAt datetime NOT NULL
   );
   
-  
 
 
-CREATE TABLE categorias (
-  id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  nome varchar(255) NOT NULL,
-  descricao text,
+CREATE TABLE produtos (
+  id  INT PRIMARY KEY AUTO_INCREMENT,
+  nome VARCHAR(255),
+  descricao TEXT,
+  preco VARCHAR (20),
   createdAt datetime NOT NULL,
   updatedAt datetime NOT NULL
 );
 
-CREATE TABLE produtos (
-  id AUTO_INCREMENT INT PRIMARY KEY,
-  nome VARCHAR(255),
-  descricao TEXT,
-  preco DECIMAL(10,2),
-  id_categoria int NOT NULL,
-  FOREIGN KEY (id_categoria) REFERENCES categorias(id)
-);
-
 CREATE TABLE pedidos (
-  id AUTO_INCREMENT INT PRIMARY KEY,
-  id_cliente INT,
-  id_funcionario INT,
-  hora DATETIME,
-  valor_total DECIMAL(10,2),
-  FOREIGN KEY (id_cliente) REFERENCES clientes(id),
-  FOREIGN KEY (id_produtos) REFERENCES produtos(id),
-  FOREIGN KEY (id_funcionario) REFERENCES funcionarios(id)
+  id  INT PRIMARY KEY AUTO_INCREMENT,
+   produto_id INT ,
+   cliente_id INT,
+   quantidade VARCHAR (255),
+   valor_total VARCHAR(255),
+   createdAt datetime NOT NULL,
+   updatedAt datetime NOT NULL,
+   FOREIGN KEY (cliente_id) REFERENCES clientes(id),
+FOREIGN KEY (produto_id) REFERENCES produtos(id)
+
   );
 
+  CREATE TABLE itens_pedido (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  quantidade INT ,
+  pedido_id INT  ,
+  produto_id INT ,
+createdAt datetime NOT NULL,
+  updatedAt datetime NOT NULL,
+  FOREIGN KEY (pedido_id) REFERENCES pedidos(id),
+  FOREIGN KEY (produto_id) REFERENCES produtos(id)
+  
 
+);
 
-
-
-
-
-
-
+INSERT INTO Produtos (nome, descricao, preco, createdAt,updatedAt )
+VALUES ("hamburguer", "pao queijo e carne", "22",now(),now()
+ 
+ );

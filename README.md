@@ -16,7 +16,8 @@ Clique no botão abaixo para ser redirecionado a documentação pelo Insomnia
 
 Markdown Snippet
 
-[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Gama_Desafio_Final&uri=)
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Hamburgueria%20Gama&uri=)
+
 
 ## API
 
@@ -52,7 +53,7 @@ Foi feito um CRUD confomer documentação.
   
 [Daniel Alejandro](https://github.com/FullDevDaniel), 
 [Bruno Lopes](https://github.com/FullDevDaniel),
-[Fréderic André](https://github.com/FullDevDaniel),
 [Mateus Vinicius](https://github.com/FullDevDaniel),
+[Larissa](https://github.com/lariss-dev),
 [Pedro Damata](https://github.com/FullDevDaniel),
 
