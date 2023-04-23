@@ -8,6 +8,8 @@ interface ClientesAttributes{
     senha: string
     endereco: string
     telefone : number
+    createdAt?: Date
+    updatedAt?: Date
 }
 
 class Clientes extends Model<ClientesAttributes> implements ClientesAttributes{
@@ -17,6 +19,8 @@ class Clientes extends Model<ClientesAttributes> implements ClientesAttributes{
     public senha!: string;
     public endereco!: string;
     public telefone!: number;
+    public readonly createdAt!: Date;
+    public readonly updatedAt!: Date;
 }
 
 Clientes.init({
@@ -43,7 +47,13 @@ Clientes.init({
     },
     telefone:{
         type: DataTypes.NUMBER
-    }   
+    },
+    createdAt: {
+        type: DataTypes.DATE
+    },
+    updatedAt: {
+        type: DataTypes.DATE
+    }
 }, 
 {
     tableName: 'clientes',

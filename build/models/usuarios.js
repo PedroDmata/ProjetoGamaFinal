@@ -28,6 +28,12 @@ Clientes.init({
     },
     telefone: {
         type: sequelize_1.DataTypes.NUMBER
+    },
+    createdAt: {
+        type: sequelize_1.DataTypes.DATE
+    },
+    updatedAt: {
+        type: sequelize_1.DataTypes.DATE
     }
 }, {
     tableName: 'clientes',

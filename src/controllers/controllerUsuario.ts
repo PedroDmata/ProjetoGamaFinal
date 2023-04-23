@@ -1,14 +1,14 @@
 import { Request, Response } from "express";
 import logger from "../logger/index";
 import Clientes from "../models/usuarios";
-import { hash } from "bcrypt";
+import { hash, compare } from "bcrypt";
+import { sign } from "jsonwebtoken";
 
 //criando usuario
 
 const usuariosControllers = {
     async create(req: Request, res: Response, ){
         try{
-            logger.info("[usuarioControllers] - Usuario criado com sucesso");
             const { nome, email, senha, endereco, telefone } = req.body;
             logger.info(`[usuarioControllers] - payload: ${JSON.stringify(Object.assign({}, req.body) ) }`
             );
@@ -20,7 +20,9 @@ const usuariosControllers = {
                 email,  
                 senha: passwordHash,
                 endereco,
-                telefone
+                telefone,
+                createdAt: new Date(),
+                updatedAt: new Date()
             });
             logger.info("[usuarioControllers] - Usuario adicionado com sucesso!! ;) ")
             return  res.json(newUsers);
@@ -99,6 +101,39 @@ const usuariosControllers = {
         } catch (error) {
             console.log(error);
             return res.status(500).json("A algo de errado!!");
+        }
+    },
+
+    // login de usuario
+
+    async login(req: Request, res: Response) {
+        try {
+            const { email, senha } = req.body;
+
+            const usuario = await Clientes.findOne({
+                where: { email }
+            });
+
+            if (!usuario) {
+                return res.status(401).json("Usuário não encontrado");
+            }
+
+            const senhaCorreta = await compare(senha, usuario.senha);
+
+            if (!senhaCorreta) {
+                return res.status(401).json("Senha incorreta");
+            }
+            
+            const token = sign(
+                { userId: usuario.id, email: usuario.email },
+                process.env.JWT_SECRET!,
+                { expiresIn: '1h' }
+            );
+
+            return res.json({ token });
+        } catch (error) {
+            console.log(error);
+            return res.status(500).json("A algo errado!");
         }
     },
 };

@@ -268,3 +268,109 @@
 {"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-20T14:05:55.714Z"}
 {"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-20T14:05:55.714Z"}
 {"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-20T14:05:55.719Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-22T20:24:05.348Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T20:24:05.354Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T20:24:05.354Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-22T20:24:05.359Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-22T20:30:01.899Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T20:30:01.903Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T20:30:01.903Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-22T20:30:01.906Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-22T20:45:04.317Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T20:45:04.321Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T20:45:04.322Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-22T20:45:04.325Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-22T20:53:56.140Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T20:53:56.144Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T20:53:56.144Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-22T20:53:56.147Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-22T20:54:54.961Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T20:54:54.965Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T20:54:54.966Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-22T20:54:54.969Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-22T20:56:19.898Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T20:56:19.901Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T20:56:19.902Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-22T20:56:19.905Z"}
+{"level":"info","message":"[usuarioControllers] - Usuario criado com sucesso","service":"hamburguergama","timestamp":"2023-04-22T21:06:38.863Z"}
+{"level":"info","message":"[usuarioControllers] - payload: {\"nome\":\"teste\",\"email\":\"teste@email.com\",\"senha\":1234567890,\"endereco\":\"qualquer\",\"telefone\":2193839383}","service":"hamburguergama","timestamp":"2023-04-22T21:06:38.864Z"}
+{"level":"error","message":"[usuariosControllers] error: Error: data must be a string or Buffer and salt must either be a salt string or a number of rounds","service":"hamburguergama","timestamp":"2023-04-22T21:06:38.864Z"}
+{"level":"info","message":"[usuarioControllers] - Usuario criado com sucesso","service":"hamburguergama","timestamp":"2023-04-22T21:10:46.836Z"}
+{"level":"info","message":"[usuarioControllers] - payload: {\"nome\":\"teste\",\"email\":\"teste@email.com\",\"senha\":1234567890,\"endereco\":\"qualquer\",\"telefone\":2193839383}","service":"hamburguergama","timestamp":"2023-04-22T21:10:46.836Z"}
+{"level":"error","message":"[usuariosControllers] error: Error: data must be a string or Buffer and salt must either be a salt string or a number of rounds","service":"hamburguergama","timestamp":"2023-04-22T21:10:46.836Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-22T21:14:51.035Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T21:14:51.039Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T21:14:51.040Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-22T21:14:51.043Z"}
+{"level":"info","message":"[usuarioControllers] - Usuario criado com sucesso","service":"hamburguergama","timestamp":"2023-04-22T21:15:02.939Z"}
+{"level":"info","message":"[usuarioControllers] - payload: {\"nome\":\"teste\",\"email\":\"teste@email.com\",\"senha\":1234567890,\"endereco\":\"qualquer\",\"telefone\":2193839383}","service":"hamburguergama","timestamp":"2023-04-22T21:15:02.940Z"}
+{"level":"error","message":"[usuariosControllers] error: Error: data must be a string or Buffer and salt must either be a salt string or a number of rounds","service":"hamburguergama","timestamp":"2023-04-22T21:15:02.942Z"}
+{"level":"info","message":"[usuarioControllers] - Usuario criado com sucesso","service":"hamburguergama","timestamp":"2023-04-22T21:16:23.060Z"}
+{"level":"info","message":"[usuarioControllers] - payload: {\"nome\":\"teste\",\"email\":\"teste@email.com\",\"senha\":1234567890,\"endereco\":\"qualquer\",\"telefone\":2193839383}","service":"hamburguergama","timestamp":"2023-04-22T21:16:23.060Z"}
+{"level":"error","message":"[usuariosControllers] error: Error: data must be a string or Buffer and salt must either be a salt string or a number of rounds","service":"hamburguergama","timestamp":"2023-04-22T21:16:23.061Z"}
+{"level":"info","message":"[usuarioControllers] - Usuario criado com sucesso","service":"hamburguergama","timestamp":"2023-04-22T21:18:21.225Z"}
+{"level":"info","message":"[usuarioControllers] - payload: {\"nome\":\"teste\",\"email\":\"teste@email.com\",\"senha\":1234567890,\"endereco\":\"qualquer\",\"telefone\":2193839383}","service":"hamburguergama","timestamp":"2023-04-22T21:18:21.226Z"}
+{"level":"error","message":"[usuariosControllers] error: Error: data must be a string or Buffer and salt must either be a salt string or a number of rounds","service":"hamburguergama","timestamp":"2023-04-22T21:18:21.226Z"}
+{"level":"info","message":"[usuarioControllers] - Usuario criado com sucesso","service":"hamburguergama","timestamp":"2023-04-22T21:18:48.435Z"}
+{"level":"info","message":"[usuarioControllers] - payload: {\"nome\":\"teste\",\"email\":\"teste@email.com\",\"senha\":\"1234567890\",\"endereco\":\"qualquer\",\"telefone\":2193839383}","service":"hamburguergama","timestamp":"2023-04-22T21:18:48.435Z"}
+{"level":"info","message":"[usuarioControllers] - Usuario adicionado com sucesso!! ;) ","service":"hamburguergama","timestamp":"2023-04-22T21:18:48.641Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-22T21:24:19.477Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T21:24:19.487Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T21:24:19.488Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-22T21:24:19.492Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-22T21:27:22.649Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T21:27:22.654Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T21:27:22.654Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-22T21:27:22.657Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-22T21:28:02.955Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T21:28:02.964Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T21:28:02.965Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-22T21:28:02.971Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-22T21:29:10.108Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T21:29:10.112Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T21:29:10.112Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-22T21:29:10.115Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-22T21:35:20.036Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T21:35:20.042Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T21:35:20.043Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-22T21:35:20.046Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-22T21:36:08.666Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T21:36:08.670Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T21:36:08.671Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-22T21:36:08.674Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-22T21:38:04.462Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T21:38:04.466Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T21:38:04.467Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-22T21:38:04.470Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-22T21:41:33.299Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T21:41:33.303Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T21:41:33.303Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-22T21:41:33.308Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-22T21:54:12.708Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T21:54:12.712Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T21:54:12.712Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-22T21:54:12.716Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-22T21:58:25.968Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T21:58:25.972Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T21:58:25.972Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-22T21:58:25.975Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-22T22:01:02.878Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T22:01:02.881Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T22:01:02.882Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-22T22:01:02.885Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-22T22:06:44.488Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T22:06:44.495Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T22:06:44.496Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-22T22:06:44.501Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-22T22:08:02.987Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T22:08:02.992Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T22:08:02.992Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-22T22:08:02.995Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-22T22:14:44.202Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T22:14:44.209Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T22:14:44.210Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-22T22:14:44.213Z"}
+{"level":"info","message":"Iniciando servidor","service":"hamburguergama","timestamp":"2023-04-22T22:16:19.076Z"}
+{"level":"info","message":"Configurações setadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T22:16:19.082Z"}
+{"level":"info","message":"Rotas inicializadas com sucesso!","service":"hamburguergama","timestamp":"2023-04-22T22:16:19.082Z"}
+{"level":"info","message":"Servidor rodando na porta 3000","service":"hamburguergama","timestamp":"2023-04-22T22:16:19.087Z"}
