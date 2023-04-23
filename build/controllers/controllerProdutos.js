@@ -20,10 +20,10 @@ const produtosControllers = {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 index_1.default.info("[produtosControllers] - Produto adicionado ao carrinho");
-                const { nome_produto, descricao, preco } = req.body;
+                const { nome, descricao, preco } = req.body;
                 index_1.default.info(`[produtosControllers] - payload: ${JSON.stringify(Object.assign({}, req.body))}`);
                 const newProduto = yield models_1.Produtos.create({
-                    nome_produto,
+                    nome,
                     descricao,
                     preco,
                 });
@@ -67,12 +67,12 @@ const produtosControllers = {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 const { id } = req.params;
-                const { nome_produto, descricao, preco } = req.body;
+                const { nome, descricao, preco } = req.body;
                 const produto = yield models_1.Produtos.findByPk(id);
                 if (!produto) {
                     return res.status(404).json("Produto não encontrado");
                 }
-                yield produto.update({ nome_produto, descricao, preco });
+                yield produto.update({ nome, descricao, preco });
                 return res.json(produto);
             }
             catch (error) {

@@ -5,6 +5,8 @@ import controller from "../controllers/controllerpedidos"
 import usuariosControllers from "../controllers/controllerUsuario";
 import categoriaController from '../controllers/categoriasController';
 import { authMiddleware } from "./authMiddleware";
+import funcionarioController from "../controllers/controllerFuncionario";
+import pedidosController from "../controllers/controllerpedidos";
 
 
 const routes = Router();
@@ -27,9 +29,11 @@ routes.delete("/produtos/:id", authMiddleware, produtosControllers.delete);
 
 
 //rotas pedidos
-routes.post('/pedidos', authMiddleware, controller.create);
-routes.get('/pedidos', authMiddleware, controller.list);
-routes.get('/pedidos:id', authMiddleware, controller.getpedidoid);
+routes.post('/pedidos', authMiddleware, pedidosController.create);
+routes.get('/pedidos', authMiddleware, pedidosController.list);
+routes.get('/pedidos:id', authMiddleware, pedidosController.getpedidoid);
+routes.put('/pedidos:id', authMiddleware,pedidosController.updatepedido);
+routes.delete('/pedidos:id',authMiddleware,pedidosController.delete);
 
 // rotas usuarios
 
@@ -40,6 +44,16 @@ routes.get("/usuario", authMiddleware, usuariosControllers.list);
 routes.get("/usuario/:id", authMiddleware, usuariosControllers.getUsuarioID);
 routes.put("/usuario/:id", authMiddleware, usuariosControllers.update);
 routes.delete("/usuario/:id", authMiddleware, usuariosControllers.delete);
+
+//rotas funcionarios
+routes.post("/funcionario", funcionarioController.create);
+routes.post("/login/funcionario", funcionarioController.loginf);
+
+routes.get("/funcionario", authMiddleware, usuariosControllers.list);
+routes.get("/funcionario/:id", authMiddleware, usuariosControllers.getUsuarioID);
+routes.put("/funcionario/:id", authMiddleware, usuariosControllers.update);
+routes.delete("/funcionario/:id", authMiddleware, usuariosControllers.delete);
+
 
 
 export default routes;

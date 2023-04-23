@@ -5,34 +5,32 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const sequelize_1 = require("sequelize");
 const db_1 = __importDefault(require("../database/db"));
-class Pedidos extends sequelize_1.Model {
+class Funcionarios extends sequelize_1.Model {
 }
-Pedidos.init({
+Funcionarios.init({
     id: {
         type: sequelize_1.DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
     },
-    valor_total: {
-        type: sequelize_1.DataTypes.INTEGER
+    nome: {
+        type: sequelize_1.DataTypes.STRING
     },
-    quantidade: {
-        type: sequelize_1.DataTypes.INTEGER
+    email: {
+        type: sequelize_1.DataTypes.STRING,
+        unique: true
     },
-    cliente_id: {
-        type: sequelize_1.DataTypes.INTEGER
-    },
-    produto_id: {
-        type: sequelize_1.DataTypes.INTEGER
+    senha: {
+        type: sequelize_1.DataTypes.STRING
     },
     createdAt: {
-        type: sequelize_1.DataTypes.DATE,
+        type: sequelize_1.DataTypes.DATE
     },
     updatedAt: {
-        type: sequelize_1.DataTypes.DATE,
-    },
+        type: sequelize_1.DataTypes.DATE
+    }
 }, {
-    tableName: 'pedidos',
+    tableName: 'funcionarios',
     sequelize: db_1.default
 });
-exports.default = Pedidos;
+exports.default = Funcionarios;

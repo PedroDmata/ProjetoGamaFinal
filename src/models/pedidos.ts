@@ -2,20 +2,22 @@ import { DataTypes, IntegerDataType, Model, ModelDefined, Optional } from "seque
 import db from "../database/db"
 interface PedidosAttributes{
   id?:number | null
-  descricao: string
-  nome_user: string
   valor_total:number
-  created_at: Date
-  updated_at: Date
+  produto_id:number
+  quantidade:number
+  cliente_id:number
+  createdAt: Date
+  updatedAt: Date
 }
 
 class Pedidos extends Model<PedidosAttributes> implements PedidosAttributes{
   public id!: number | null;
-  public descricao!: string;
-  public nome_user!: string;
   public valor_total!: number;
-  public readonly created_at!: Date;
-  public readonly updated_at!: Date;
+  public quantidade!: number;
+  public produto_id!: number;
+  public cliente_id!: number;
+  public readonly createdAt!: Date;
+  public readonly updatedAt!: Date;
 }
 
 Pedidos.init({
@@ -24,19 +26,25 @@ Pedidos.init({
     primaryKey: true,
     autoIncrement: true,
   },
-  nome_user: {
-    type: DataTypes.STRING,
-  },
+
  valor_total:{
-    type:DataTypes.DECIMAL
+    type:DataTypes.INTEGER
  },
-  descricao: {
-    type: DataTypes.STRING,
-  },
-  created_at: {
+ quantidade:{
+  type:DataTypes.INTEGER
+
+ },
+ cliente_id:{
+  type:DataTypes.INTEGER
+ },
+ produto_id:{
+  type: DataTypes.INTEGER
+
+ },
+  createdAt: {
     type: DataTypes.DATE,
   },
-  updated_at: {
+  updatedAt: {
     type: DataTypes.DATE,
   },
 }, 

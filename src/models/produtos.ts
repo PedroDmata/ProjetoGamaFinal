@@ -3,14 +3,14 @@ import db from "../database/db"
 
 interface ProdutosAttributes{
   id?: number | null
-  nome_produto: string
+  nome: string
   descricao: string
   preco: string
 }
 
 class Produtos extends Model<ProdutosAttributes> implements ProdutosAttributes{
   public id!: number | null;
-  public nome_produto!: string;
+  public nome!: string;
   public descricao!: string;
   public preco!: string;
 }
@@ -23,7 +23,7 @@ Produtos.init({
     autoIncrement: true,
   },
 
-  nome_produto: {
+  nome: {
     type: DataTypes.STRING,
   },
 

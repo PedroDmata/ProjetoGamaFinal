@@ -20,9 +20,9 @@ const pedidosController = {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 index_1.default.info("[pedidosController] - Iniciando criação do pedido");
-                const { nome_user, descricao, valor_total } = req.body;
+                const { quantidade, produto_id, valor_total, cliente_id } = req.body;
                 index_1.default.info(`[pedidosController] - payload: ${JSON.stringify(Object.assign({}, req.body))}`);
-                const newPedidos = yield pedidos_1.default.create({ descricao, nome_user, valor_total, created_at: new Date(), updated_at: new Date() });
+                const newPedidos = yield pedidos_1.default.create({ quantidade, produto_id, valor_total, cliente_id, createdAt: new Date(), updatedAt: new Date() });
                 index_1.default.info("[pedidosController] - Pedido realizada com sucesso!");
                 return res.json(newPedidos);
             }
@@ -64,12 +64,12 @@ const pedidosController = {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 const { id } = req.params;
-                const { descricao, valor_total } = req.body;
+                const { valor_total } = req.body;
                 const pedido = yield pedidos_1.default.findByPk(id);
                 if (!pedido) {
                     return res.status(404).json("pedido não encontrado");
                 }
-                yield pedido.update({ valor_total, descricao });
+                yield pedido.update({ valor_total });
                 return res.json(pedido);
             }
             catch (error) {
@@ -77,6 +77,24 @@ const pedidosController = {
                 return res.status(500).json("errado");
             }
         });
-    }
+    },
+    //deletar pedido
+    delete(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const { id } = req.params;
+                const pedido = yield pedidos_1.default.findByPk(id);
+                if (!pedido) {
+                    return res.status(404).json("Pedido não encontrado");
+                }
+                yield pedido.destroy();
+                return res.json("Pedido excluído com sucesso");
+            }
+            catch (error) {
+                console.log(error);
+                return res.status(500).json("A algo errado!");
+            }
+        });
+    },
 };
 exports.default = pedidosController;
